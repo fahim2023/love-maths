@@ -65,15 +65,15 @@ function calculateCorrectAnswer() {
   }
 }
 function incrementScore() {
-  let score = parseInt(document.getElementById("score").textContent);
-  document.getElementById("score").textContent = ++score;
+  let score = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++score;
   console.log(score);
 }
 function incrementWrongAnswer() {
   let incorrectScore = parseInt(
-    document.getElementById("incorrectScore").textContent,
+    document.getElementById("incorrectScore").innerText,
   );
-  document.getElementById("incorrectScore").textContent = ++incorrectScore;
+  document.getElementById("incorrectScore").innerText = ++incorrectScore;
 }
 function displayAdditionQuestion(operand1, operand2) {
   document.getElementById("operand1").textContent = operand1;
