@@ -24,6 +24,9 @@ function runGame(gameType) {
 
   let num1 = Math.floor(Math.random() * 25) + 1;
   let num2 = Math.floor(Math.random() * 25) + 1;
+  let divisor = Math.floor(Math.random() * 25) + 1;
+  let quotient = Math.floor(Math.random() * 25) + 1;
+  let dividend = divisor * quotient;
   if (gameType == "addition") {
     displayAdditionQuestion(num1, num2);
   } else if (gameType === "subtract") {
@@ -32,7 +35,7 @@ function runGame(gameType) {
   } else if (gameType === "multiply") {
     displayMultiplyQuestion(num1, num2);
   } else if (gameType === "division") {
-    displayDivisionQuestion(num1, num2);
+    displayDivisionQuestion(dividend, divisor);
   } else {
     alert(`Unknown game type: ${gameType}`);
     throw `Unknown game type; ${gameType}. Aborting`;
